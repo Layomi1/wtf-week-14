@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List using Web Components</title>
+    <link rel="stylesheet" href="font-icon/css/all.css" />
+  </head>
+
+  <style>
+    body {
+      background: #e5e5f5;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      padding: 50px 0 10px 0;
+    }
+
+    .card {
+      width: 250px;
+      height: 520px;
+      background: white;
+      margin: 40px auto;
+      display: grid;
+      gap: 10px;
+      padding: 10px 20px;
+      box-shadow: rgb(215, 211, 237) 0px 2px 16px 8px,
+        rgb(215, 211, 237) 0px 2px 16px 8px;
+    }
+
+    .items {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .top {
+      display: grid;
+      gap: 0;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #d8d8d8;
+    }
+
+    .btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: -10px;
+    }
+
+    .btns p {
+      margin-bottom: 0;
+      color: #b9b9b9;
+    }
+  </style>
+
+  <body>
+    <div class="card">
+      <div class="top">
+        <app-top content="Back to lists">
+          <i class="fas fa-arrow-left"></i>
+          <p>Back to Lists</p>
+        </app-top>
+
+        <div class="items">
+          <todo-list checked> Meditation </todo-list>
+          <todo-list>Pick up Anna</todo-list>
+          <todo-list>Set up meeting with Jay</todo-list>
+          <todo-list>Finish Daily UI</todo-list>
+          <todo-list>Second edits on article</todo-list>
+          <todo-list checked>Email Chris</todo-list>
+        </div>
+      </div>
+
+      <div class="btns">
+        <p>Pull from recurring lista</p>
+        <routine-button variant="#F5ED84">Daily</routine-button>
+        <routine-button variant="#B5EA81">Weekly</routine-button>
+        <routine-button variant="#F8AAAA">Monthly</routine-button>
+        <routine-button variant="#B3B3EF">Occasional</routine-button>
+        <!-- <button>b</button>
+        <button>c</button>
+        <button>d</button> -->
+      </div>
+    </div>
+  </body>
+  <script src="Head.js"></script>
+  <script src="Button.js"></script>
+  <script src="TodoItem.js"></script>
+</html>
